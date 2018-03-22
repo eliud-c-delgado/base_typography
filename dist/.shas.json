@@ -1,0 +1,160 @@
+[
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "index.html",
+        "sha": "a18f5477cd68b261310acbe8d06e6354c9fc92e5"
+      }
+    ],
+    "outputSha": "934ea2aa5a7b1c5114495122be597290ab0a65f5",
+    "input": "index.html",
+    "output": [
+      "index.html"
+    ]
+  },
+  {
+    "type": "babel-core@6.26.0::map::minify",
+    "inputSha": [
+      {
+        "file": "scripts/main.babel.js",
+        "sha": "b23c609faeb8e2e4e4c09b3bb23ad52f55b70dc1"
+      }
+    ],
+    "outputSha": "1aedba344b0c764bca157c71b9ca0fd61ba3ef40",
+    "input": "scripts/main.babel.js",
+    "output": [
+      "scripts/main.js.map",
+      "scripts/main.js"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/_helpers.sass",
+        "sha": "fa31af1285182053b93016535b5f980db4379154"
+      }
+    ],
+    "outputSha": "fa31af1285182053b93016535b5f980db4379154",
+    "input": "styles/_helpers.sass",
+    "output": [
+      "styles/_helpers.sass"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/_layout.sass",
+        "sha": "82483c2ef9d7810a7daba9d00ada0de7634a08e5"
+      }
+    ],
+    "outputSha": "82483c2ef9d7810a7daba9d00ada0de7634a08e5",
+    "input": "styles/_layout.sass",
+    "output": [
+      "styles/_layout.sass"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/_normalize.sass",
+        "sha": "33751e94a9ec91e35c468a10cfb47e2cdd416e28"
+      }
+    ],
+    "outputSha": "33751e94a9ec91e35c468a10cfb47e2cdd416e28",
+    "input": "styles/_normalize.sass",
+    "output": [
+      "styles/_normalize.sass"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/_normopentype.scss",
+        "sha": "8c936339fef570bad0f429230fb297ba4f926219"
+      }
+    ],
+    "outputSha": "8c936339fef570bad0f429230fb297ba4f926219",
+    "input": "styles/_normopentype.scss",
+    "output": [
+      "styles/_normopentype.scss"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/_typebase.sass",
+        "sha": "1032db72c4085666d2a953e0f335fd781e0ee217"
+      }
+    ],
+    "outputSha": "1032db72c4085666d2a953e0f335fd781e0ee217",
+    "input": "styles/_typebase.sass",
+    "output": [
+      "styles/_typebase.sass"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/_typography.sass",
+        "sha": "b4b8020f7f082ac227593a164651c7b075c69841"
+      }
+    ],
+    "outputSha": "b4b8020f7f082ac227593a164651c7b075c69841",
+    "input": "styles/_typography.sass",
+    "output": [
+      "styles/_typography.sass"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/_variables.sass",
+        "sha": "4bc8636e73952d9764e771280af68bb60f72efc3"
+      }
+    ],
+    "outputSha": "4bc8636e73952d9764e771280af68bb60f72efc3",
+    "input": "styles/_variables.sass",
+    "output": [
+      "styles/_variables.sass"
+    ]
+  },
+  {
+    "type": "node-sass@4.7.2::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/main.sass",
+        "sha": "bdac9e43cfecc5ca5f4f6250814bbb1f5789ad11"
+      },
+      {
+        "file": "styles/_typography.sass",
+        "sha": "b4b8020f7f082ac227593a164651c7b075c69841"
+      },
+      {
+        "file": "styles/_helpers.sass",
+        "sha": "fa31af1285182053b93016535b5f980db4379154"
+      },
+      {
+        "file": "styles/_variables.sass",
+        "sha": "4bc8636e73952d9764e771280af68bb60f72efc3"
+      },
+      {
+        "file": "styles/_layout.sass",
+        "sha": "82483c2ef9d7810a7daba9d00ada0de7634a08e5"
+      }
+    ],
+    "outputSha": "c84f7ad554e6a40850e3e03a95bf17fdce88e184",
+    "input": "styles/main.sass",
+    "output": [
+      "styles/main.css.map",
+      "styles/main.css"
+    ]
+  }
+]
