@@ -1,11 +1,12 @@
 *
   //border: 1px solid tomato
+  // Sorry! 😣
+  margin-top: 0
 
 html
   font-family: var(--font-heading)
   font-size: cal(1vw * 1.6em)
   line-height: 1.88
-  margin: 0
   padding: 0
   display: block
 
@@ -38,7 +39,7 @@ h2
 h3,h4
   +interpolate(font-size, 42em, 64em, 1.61111111em, 1.60869565em)
   +interpolate(line-height, 42em, 64em, 1.17241379em, 1.16216216em)
-  +interpolate(margin-top, 42em, 64em, 1.17241379em, 1.16216216em)  
+  +interpolate(margin-top, 42em, 64em, 1.17241379em, 1.16216216em)
   +interpolate(margin-bottom, 42em, 64em, 1.17241379em, 1.16216216em)
   font-family: var(--font-heading)
   color: var(--color_gray)
@@ -79,12 +80,34 @@ article
   overflow-wrap: word-brake
   hyphens: auto
   -webkit-hyphens: auto
- 
-  
+
+
   & p
     margin-top: 0
     +interpolate(margin-bottom, 42em, 64em, 1.86956522em, 1.86956522em)
- 
+
+// Drop Cap
+$font-size: 1.6125rem
+$cap-size: $font-size * 6.45
+
+.first
+  //+interpolate(font-size, 42em, 64em, 1.61111111em, 1.60869565em)
+  font-size: 1.32em
+  @supports (initial-letter: 3) or (-webkit-initial-letter: 3)
+    &::first-letter
+      initial-letter: 3
+      -webkit-initial-letter: 3
+      color: var(--color_yellow)
+  @supports (not(initial-letter: 3)) and (not(-webkit-initial-letter: 3))
+    &::first-letter
+      color: var(--color_yellow)
+      font-size: $cap-size
+      float: left
+      line-height: .385
+      margin: 1.825rem .15rem 0 0
+      padding: 0 0 0.25rem 0
+
+
 table
   width: 100%
   max-width: 90vw
@@ -98,7 +121,7 @@ a
   border-radius: 4px
   color: var(--color_red)
   transition: color .3s ease-in-out, background-color .3s ease-out
- 
+
   &:active,
   &:hover
     outline: 0
@@ -130,10 +153,44 @@ summary
   font-family: inherit
   font-size: inherit
   line-height: inherit
-  margin: inherit
-  width: 100%
-  max-width: 90vw
+  margin-left: inherit
+  margin-right: inherit
+  +interpolate(margin-bottom, 42em, 64em, 1.86956522em, 1.86956522em)
+  width: 92%
+  max-width: 92vw
+  background-color: #fff
+  color: var(--color_gray)
+  border-width: 10px 0px 1px 0px
+  border-style: solid hidden
+  border-color: var(--color_purple)
+  display: block
+  padding: 1.25em 0.88em 0.88em 1.88em
+  white-space: pre
+  word-wrap: normal
+  hyphens: none
+  -webkit-hyphens: none
   overflow: scroll
+
+  &
+    @media screen and (max-width: 41em)
+      max-width: 72vw
+      margin-left: 0
+      margin-right: auto
+
+  &:after
+    content: "\2013" attr(cite)
+    position: absolute
+    left: auto
+    right: 29%
+    bottom: initial
+    display: block
+    text-align: right
+    font-style: italic
+    font-weight: 600
+    font-size: 0.8em
+    margin-top: -1.66em
+    color: var(--color_purple)
+
 
 audio
   display: inline-block
@@ -149,13 +206,14 @@ canvas
 
 blockquote
   width: calc(24vw + (12em - 1.64vw))
-  max-width: 90%
+  width: 90%
+  max-width: 92vw
   display: block
-  border-width: 12px 0px 1px 0px
+  border-width: 10px 0px 1px 0px
   border-style: solid hidden
   border-color: var(--color_purple)
   padding: 1.25em 0.88em 0.88em
-  margin: .5em auto
+  margin: inherit
   +interpolate(margin-bottom, 42em, 64em, 1.86956522em, 1.86956522em)
   position: relative
   color: var(--color_black)
@@ -166,12 +224,12 @@ blockquote
   hyphens: none
   -webkit-hyphens: none
 
-  & 
+  &
     @media screen and (max-width: 41em)
       max-width: 72vw
       margin-left: 0
       margin-right: auto
-  
+
 
   &:before
     display: block
@@ -184,10 +242,10 @@ blockquote
     width: 4rem
     height: 4rem
     font-weight: 700
-    font: 5.5em/0.75em var(--font-heading)
+    font: 5.5em/0.88em var(--font-heading)
     color: var(--color_yellow)
     text-align: center
-    
+
   &:after
     content: "\2013" attr(cite)
     display: block
