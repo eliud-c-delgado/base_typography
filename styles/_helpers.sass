@@ -1,7 +1,7 @@
 
 //Mixins taken from https://codepen.io/MadeByMike/pen/GmBLKo?editors=1100 by Mike Riethmuller https://www.madebymike.com.au/
 //Another Codepen by Mike https://codepen.io/MadeByMike/pen/vNrvdZ?editors=0100
-//Non-linear interpolation in CSS https://www.madebymike.com.au/writing/non-linear-interpolation-in-css/  
+//Non-linear interpolation in CSS https://www.madebymike.com.au/writing/non-linear-interpolation-in-css/
 =interpolate($properties, $min-screen, $max-screen, $min-value, $max-value)
   &
     @each $property in $properties
@@ -28,13 +28,11 @@
 @for $i from 1 through 12
   .col-#{$i}
     grid-column: span $i
-    height: 100px
     background-color: var(--color_blue)
-  
+
   @media screen and (max-width: 41em)
     .col-#{$i}__sm
       grid-column: span $i
-      height: 50px
       background-color: var(--color_yellow)
 
 //Positioned columns
@@ -66,4 +64,4 @@
 
 
 
-   
+

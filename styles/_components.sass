@@ -1,0 +1,52 @@
+//Hero Section
+.hero
+  grid-column: 1 / span 12
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  padding: 0 8.125vw
+  margin: 0
+  background: linear-gradient(-32deg, var(--color_purple) 1%,var(--color_red) 50%, var(--color_yellow) 90%)
+  +interpolate(margin-bottom, 42em, 64em, 2.66em, 3.44em)
+
+  & h1
+    margin-bottom: 1rem
+    align-self: center
+    color: var(--color_white)
+  & hr
+    color: var(--color_white)
+    align-self: center
+    width: 100%
+  & h3
+    margin: 1rem 0 6vw
+    align-self: flex-end
+    font-weight: 300
+    color: var(--color_white)
+
+//Toc
+.index
+  position: fixed
+  display: block
+  top: 0
+  right: 0
+  height: 100vw
+  background-color: var(--color_yellow)
+  color: var(--color_white)
+  display: flex
+  font-size: 0.88em
+  justify-self: flex-end
+  padding: 1rem
+  flex-direction: column
+  justify-items: flex-end
+  align-items: center
+  transition: transform 0.6s ease-in-out
+  transform: translateX(100%)
+
+.on
+    transform: translateX(0%)
+
+
+
+
+
