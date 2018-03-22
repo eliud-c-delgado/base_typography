@@ -1,0 +1,95 @@
+*
+  //border: 1px solid tomato
+
+html
+  font-family: var(--font-heading)
+  font-size: cal(1vw * 1.6em)
+  line-height: 1.88
+  margin: 0
+  padding: 0
+  display: block
+
+body
+  //These three values will be interpolated with JS
+  color: var(--color_dark-gray)
+  font-weight: regular
+  background: var(--color_white)
+
+h1
+  +interpolate(font-size, 42em, 64em, 4.22222222em, 4.2173913em)
+  +interpolate(line-height, 42em, 64em, 1.34210526em, 1.32989691em)
+  +interpolate(margin-top, 42em, 64em, 0.89473684em, 0.88659794em)
+  +interpolate(margin-bottom, 42em, 64em, 0.89473684em, 0.88659794em)
+  font-family: var(--font-heading)
+  hyphens: none
+  -webkit-hyphens: none
+
+h2
+  +interpolate(font-size, 42em, 64em, 2.61111111em, 2.60869565em)
+  +interpolate(line-height, 42em, 64em, 1.44680851em, 1.43333333em)
+  +interpolate(margin-top, 42em, 64em, 0.72340426em, 0.71666667em)
+  +interpolate(margin-bottom, 42em, 64em, 0.72340426em, 0.71666667em)
+  font-family: var(--font-heading)
+  hyphens: none
+  -webkit-hyphens: none
+
+h3,h4
+  +interpolate(font-size, 42em, 64em, 1.61111111em, 1.60869565em)
+  +interpolate(line-height, 42em, 64em, 1.17241379em, 1.16216216em)
+  +interpolate(margin-top, 42em, 64em, 1.17241379em, 1.16216216em)  
+  +interpolate(margin-bottom, 42em, 64em, 1.17241379em, 1.16216216em)
+  font-family: var(--font-heading)
+  hyphens: none
+  -webkit-hyphens: none
+
+h5
+  +interpolate(font-size, 42em, 64em, 1.125em, 1em)
+  +interpolate(line-height, 42em, 64em, 1.88888889em, 1.86956522em)
+  +interpolate(margin-top, 42em, 64em, 1.88888889em, 1.86956522em)
+  +interpolate(margin-bottom, 42em, 64em, 1.88888889em, 1.86956522em)
+  font-family: var(--font-heading)
+  hyphens: none
+  -webkit-hyphens: none
+
+h6
+  +interpolate(font-size, 42em, 64em, 1em, 0.88659794em)
+  +interpolate(line-height, 42em, 64em, 1.88888889em, 1.86956522em)
+  +interpolate(margin-top, 42em, 64em, 1.88888889em, 1.86956522em)
+  +interpolate(margin-bottom, 42em, 64em, 1.88888889em, 1.86956522em)
+  font-family: var(--font-heading)
+  hyphens: none
+  -webkit-hyphens: none
+
+article
+  +interpolate(font-size, 42em, 64em, 1.125em, 1.4375em)
+  +interpolate(line-height, 42em, 64em, 1.875em, 1.86956522em)
+  font-family: var(--font-body)
+  color: var(--color_dark-gray)
+  font-weight: 400
+  font-smoothing: antialiased
+  font-variant-ligatures: common-ligatures
+  font-variant-numeric: oldstyle-nums slashed-zero
+  text-rendering: optimizeLegibility
+  white-space: normal
+  overflow-wrap: word-brake
+  hyphens: auto
+  -webkit-hyphens: auto
+ 
+  
+  & p
+    margin-top: 0
+    +interpolate(margin-bottom, 42em, 64em, 1.86956522em, 1.86956522em)
+ 
+table
+  width: 100%
+  max-width: 90vw
+  overflow: scroll
+
+.poetry
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+  margin: inherit
+  width: 100%
+  max-width: 90vw
+  overflow: scroll

@@ -1,0 +1,69 @@
+
+//Mixins taken from https://codepen.io/MadeByMike/pen/GmBLKo?editors=1100 by Mike Riethmuller https://www.madebymike.com.au/
+//Another Codepen by Mike https://codepen.io/MadeByMike/pen/vNrvdZ?editors=0100
+//Non-linear interpolation in CSS https://www.madebymike.com.au/writing/non-linear-interpolation-in-css/  
+=interpolate($properties, $min-screen, $max-screen, $min-value, $max-value)
+  &
+    @each $property in $properties
+      #{$property}: $min-value
+    @media screen and (min-width: $min-screen)
+      @each $property in $properties
+        #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value)
+    @media screen and (min-width: $max-screen)
+      @each $property in $properties
+        #{$property}: $max-value
+
+// Requires the calc-interpolation function which can also be used independently
+
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value)
+  $a: ($max-value - $min-value) / ($max-screen - $min-screen)
+  $b: $min-value - $a * $min-screen
+  $sign: "+"
+  @if $b < 0
+    $sign: "-"
+    $b: abs($b)
+  @return calc(#{$a * 100}vw #{$sign} #{$b})
+
+//Generates grid classes
+@for $i from 1 through 12
+  .col-#{$i}
+    grid-column: span $i
+    height: 100px
+    background-color: var(--color_blue)
+  
+  @media screen and (max-width: 41em)
+    .col-#{$i}__sm
+      grid-column: span $i
+      height: 50px
+      background-color: var(--color_yellow)
+
+//Positioned columns
+=positioned-columns($start-max, $span, $color)
+  @for $i from 1 to $start-max
+    .col-#{$span}_start-#{$i}
+      grid-column: #{$i} / span #{$span}
+      height: 100px
+      background-color: var(--color_#{$color})
+
+    @media screen and (max-width: 41em)
+      .col-#{$span}_start-#{$i}__sm
+        grid-column: #{$i} / span #{$span}
+        height: 50px
+        background-color: var(--color_#{$color})
+
++positioned-columns(13, 1, purple)
++positioned-columns(12, 2, yellow)
++positioned-columns(11, 3, emerald)
++positioned-columns(10, 4, red)
++positioned-columns(9, 5, light-gray)
++positioned-columns(8, 6, gray)
++positioned-columns(7, 7, dark-gray)
++positioned-columns(6, 8, black)
++positioned-columns(5, 9, yellow)
++positioned-columns(4, 10, emerald)
++positioned-columns(3, 11, red)
+
+
+
+
+   
