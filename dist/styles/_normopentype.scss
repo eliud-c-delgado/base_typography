@@ -66,15 +66,6 @@ code {
   font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
 }
 
-mark {
-}
-
-small {
-}
-
-cite {
-}
-
 /**
  * 1. Turn on proper supercript numerals
  */
@@ -94,20 +85,9 @@ sub {
 
 /* Grouping content
 ========================================================================== */
-
-figcaption {
-}
-
-blockquote,
-q {
-}
-
 /**
  * TODO: Adds proper bullets
  */
-
-ul {
-}
 
 /*
  * TODO:
@@ -115,28 +95,12 @@ ul {
  * 2. Use proper numerals for lists
  */
 
-ol {
-}
-
 /**
  * Adds proper small caps
  */
-
-dl,
-dd,
-dl,
-dt,
-dfn {
-}
-
 /**
  * TODO: scmp, sc2c, pnum, case sensitive forms for postal codes
  */
-
-address {
-}
-
-
 /* Forms
 ========================================================================== */
 
